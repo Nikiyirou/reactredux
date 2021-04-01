@@ -1,16 +1,21 @@
-import Store from './Store';
-import Cart from './Cart';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import './App.css';
+import React,{Component} from 'react';
+import Items from "./Items";
 
-function App(){
-    return(
-        <Router>
-            <Switch>
-                <Route path="/" exact component={Store} />
-                <Route path="/Cart" component={Cart} />
-            </Switch>
-        </Router>
-    );
+
+
+
+class App extends Component{
+    render() {
+        return(
+            <div className="App">
+
+                <h3>React-Redux Store</h3>
+                <p>Welcome to React Store</p>
+                <Items/>
+            </div>
+        )
+    }
 }
 
 export default App;
